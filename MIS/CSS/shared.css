@@ -1,0 +1,217 @@
+
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html{
+	height: 100%;
+}
+h1{
+	letter-spacing: 0.8px;
+	margin: 0;
+}
+body{
+	height: 100%;
+	font-family: Arial;
+}
+
+.hero-section{
+	min-height: 100%;
+	position: relative;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.9),rgba(0,0,0,0.6)), url("../Images/hero-img-2200.jpg") center/cover no-repeat fixed;
+}
+.hero-section .main-nav{
+	position: relative;
+	width: 80%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 25px 5px 10px 0;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+.logo-container{
+	width: 80px;
+	height: auto
+}
+.logo-container .logo{
+	width: 100%;
+
+}
+.main-nav .nav-list{
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+}
+.nav-list .nav-item{
+	margin-left: 48px;
+}
+.nav-item .nav-link{
+	position: relative;
+	/*color: rgba(222, 31, 18);*/
+	color: #94F371;
+	text-decoration: none;
+	font-size: 20px;
+	letter-spacing: 0.6px;
+	font-weight: bold;
+	transition: all 250ms ease-in-out;
+}
+.sub-menu-container{
+	position: relative;
+	cursor: pointer;
+
+}
+.sub-menu-container .avatar{
+	width: 40px;
+	height: 40px;
+}
+.sub-menu{
+	width: 120px;
+	position: absolute;
+	top: 55px;
+	right: 0;
+	background: #212323;
+	color: black;
+	list-style-type: none;
+	display: none;
+}
+
+.sub-menu .sub-item{
+	padding: 10px 10px;
+	/*width: 100px;*/
+	transition: all 250ms ease-in-out;
+}
+.sub-menu .sub-item:hover{
+	background: #414444;
+}
+
+.sub-item .sub-link{
+	text-decoration: none;
+	color: #94F371;
+	font-weight: bold;
+	letter-spacing: 0.7px;
+}
+.nav-item .nav-link:hover{
+	color: #d0ffbf;
+}
+
+.nav-item .nav-link::after{
+	position: absolute;
+	display: block;
+	content: '';
+	margin-top: 5px;
+	height: 3px;
+	background: red;
+	width: 100%;
+	-webkit-transform: scaleX(0);
+	    -ms-transform: scaleX(0);
+	        transform: scaleX(0);
+	-webkit-transform-origin: right;
+	    -ms-transform-origin: right;
+	        transform-origin: right;
+	-webkit-transition: -webkit-transform 250ms ease-in-out;
+	transition: -webkit-transform 250ms ease-in-out;
+	-o-transition: transform 250ms ease-in-out;
+	transition: transform 250ms ease-in-out;
+	transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+.nav-item .nav-link:hover.nav-link::after{
+	-webkit-transform: scaleX(1);
+	    -ms-transform: scaleX(1);
+	        transform: scaleX(1);
+	-webkit-transform-origin: left;
+	    -ms-transform-origin: left;
+	        transform-origin: left;
+} 
+
+.menu-btn{
+    position: absolute;
+    padding: 5px;
+    cursor: pointer;
+    top: 15px;
+    right: 0;
+    z-index: 2;
+    display: none;
+}
+.menu-btn .bar{
+    display: block;
+    background: black;
+    width: 25px;
+    border: 2px solid #94F371;
+    margin-top: 5px;
+    border-radius: 20px;
+}
+
+@media (max-width: 650px){
+	
+	.menu-btn{
+        display: block;
+        transition: all 250ms ease-in-out;
+    }
+    .menu-btn:hover{
+        opacity: 0.8;
+    }
+
+	.main-nav .nav-list{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #1e1b1b;
+        width: 50%;
+        height: 100%;
+        margin-left: 0;
+        padding: 30px;
+        transform: translateX(-105%);
+        transition: all 450ms ease-in-out;
+        z-index: 10;
+    }
+    .main-nav .nav-list li{
+        padding: 10px 0;
+    }
+    .main-nav .nav-list.show{
+        transform: translateX(0%);
+    }    
+
+}
+
+.footer{
+	background: black;
+	padding: 30px 0;
+}
+.footer .footer-nav{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer-nav .footer-nav-list{
+	list-style-type: none;
+	display: flex;
+}
+.footer-nav-list .nav-item{
+	margin-left: 45px;
+}
+.footer .copyright{
+	color: #ddd;
+	margin-top: 10px;
+	text-align: center;
+}
+
+@media (max-width: 650px){
+	.footer .footer-nav{
+		flex-direction: column;
+	}
+	.footer-nav .footer-nav-list{
+		list-style-type: none;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.footer-nav-list .nav-item{
+		margin: 20px 0 0 0;
+	}
+}

@@ -1,0 +1,19 @@
+.child-leftAnchorPane{
+    -fx-background-color: linear-gradient(to right, #aaffa9, #11ffbd);
+}
+.child-rightAnchorPane{
+    -fx-background-color: #fff;
+}
+.primary-btn{
+    -fx-background-color: #0598ff;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+}
+.secondary-btn{
+    -fx-background-color: #ffa43c;
+    -fx-font-size: 16px;
+
+}
+.transparent-btn{
+    -fx-background-color: #EBE8F9;
+}

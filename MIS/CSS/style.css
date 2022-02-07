@@ -1,0 +1,137 @@
+
+
+.hero-title{
+	margin-top: 70px;
+	font-size: 60px;
+	font-style: italic;
+	color: white;
+	text-align: center;
+}
+.search-form{
+	min-width: 300px;
+	width: 40%;
+	max-width: 500px;
+	margin: 40px auto 0 auto;
+	/*border: 2px solid #ddd;*/
+}
+.user-tag{
+	margin: 10px 0;
+	color: rgb(255, 164, 60);
+}
+
+.radio-container{
+	background: rgba(38, 38, 37, 0.8);
+	padding: 10px 5px;
+	color: white;
+	margin: 10px 0;
+}
+.radio-container #registered{
+	margin-left: 30px;
+}
+
+.input-container{
+	display: flex;
+	align-items: center;
+}
+.input-container .search-container{
+	flex-basis: 75%;
+	position: relative;
+}
+.input-container .submit-container{
+	flex-basis: 25%;
+}
+.search-container .search{
+	display: block;
+	width: 100%;
+	padding: 5px 0;
+	border: 0;
+	border-bottom: 2px solid rgb(255, 164, 60);
+	background: transparent;
+	color: white;
+}
+.search-container .search:focus,
+.search-container .search:active,
+.search-container .search:focus-visible{
+	outline: -webkit-focus-ring-color auto 0px;
+	outline-offset: 0;
+}
+.search-container .search-icon{
+	position: absolute;
+	color: white;
+	top: 50%;
+	right: 92%;
+	transform: translateY(-50%);
+	font-size: 20px;
+	transition: all 350ms ease-in-out;
+}
+.search-container .search-icon-animated{
+	right: 2%;
+}
+.submit-container .submit{
+	background: rgb(255, 164, 60);
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	margin-left: 5px;
+	padding: 5px 8px;
+	border-radius: 2px;
+	border: 1px solid black;
+	outline: none;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 350ms ease-in-out;
+}
+.submit-container .submit:hover,
+.submit-container .submit:focus{
+	border: 1px solid white;
+	background: transparent;
+	color: white;
+}
+
+.result-modal{
+	background: transparent;
+	margin-top: 10px;
+	color: white;
+	font-size: 18px;
+}
+.result-modal .error-message{
+	padding: 10px;
+	background: rgba(0,0,0,0.7);
+	color: rgb(237, 38, 24);
+	display: none;
+}
+.result-modal .result-list{
+	list-style-type: none;
+}
+.result-list .list-item{
+	background: rgba(38, 38, 37, 0.8);
+	padding: 10px 10px;
+	margin-bottom: 5px;
+}
+
+.result-list .list-item:hover{
+	cursor: pointer;
+}
+
+@media (max-width: 650px){
+	.hero-title{
+		font-size: 40px;
+	}
+}
+
+.goal-section{
+	padding: 100px 0;
+	height: 400px;
+}
+.goal-section .goal-content-container{
+	width: 80%;
+	margin: 0 auto;
+}
+.goal-content-container .goal-heading{
+	text-align: center;
+}
+.goal-content-container .goal-description{
+	margin-top: 20px;
+	text-align: center;
+}
+

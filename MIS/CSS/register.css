@@ -1,0 +1,119 @@
+.hero-section .login-cta{
+	background: rgb(255, 164, 60);
+	display: block;
+    color: black;
+	width: 140px;
+	text-align: center;
+	font-size: 18px;
+	margin: 200px auto 0 auto;
+	padding: 5px 8px;
+	border-radius: 2px;
+	border: 1px solid black;
+	outline: none;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 350ms ease-in-out;
+    text-decoration: none;
+}
+.login-cta i{
+	position: relative;
+	margin-left: 5px;
+	top: 2px;
+}
+
+.success-label{
+	margin-top: 15px;
+	color: white;
+	text-align: center;
+}
+#form-section{
+	/*background: blue;*/
+ 	background: linear-gradient(to right, #141e30, #243b55); 
+	margin-top: 0;
+}
+
+.form-container{
+	width: 320px;
+	/*background: rgba(0,0,0,0.8);*/
+	padding: 60px 20px 20px 20px;
+	margin: 0 auto 0 auto;
+	color: #fff;
+}
+
+
+.form-container h1{
+	color: #94F371;
+	margin-top: 10px;
+	text-align: center;
+}
+.login-form label,
+.login-form input{
+	display: block;
+	width: 100%;
+}
+
+.login-form label{
+	font-weight: bold;
+	font-size: 18px;
+	margin: 15px 0 5px 0;
+}
+.login-form input{
+	display: block;	
+	width: 100%;
+	margin-bottom: 10px;
+}
+.login-form .input-warning{
+	font-size: 14px;
+	color: red;
+	display: none;
+}
+.login-form .server-warning{
+	font-size: 16px;
+	color: red;
+	font-weight: bold;
+	text-align: center;
+}
+.login-form .input-warning-active{
+	display: block;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"]{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	padding: 5px 0;
+	color: #fff;
+	font-size: 16px;
+}
+.login-form .submit-btn{
+	background: rgb(255, 164, 60);
+	margin-top: 30px;
+	display: block;
+	font-size: 18px;
+	padding: 5px 8px;
+	border-radius: 2px;
+	border: 1px solid black;
+	outline: none;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 350ms ease-in-out;
+}
+.login-form .submit-btn:hover,
+.login-form .submit-btn:focus{
+	border: 1px solid white;
+	background: transparent;
+	color: white;
+}
+.login-form a{
+	text-decoration: none;
+	font-size: 12px;
+	line-height: 20px;
+	color: darkgrey;
+}
+@media (max-width: 600px){
+	.form-container{
+		width: 95%;
+	}
+}

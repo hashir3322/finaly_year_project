@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="534.0" prefWidth="1000.0" stylesheets="@../sample/application.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainApp.AppController">
+   <children>
+      <BorderPane fx:id="mainBorderPane" layoutX="27.0" layoutY="4.0" prefHeight="373.0" prefWidth="541.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox alignment="CENTER_LEFT" prefHeight="534.0" prefWidth="162.0" style="-fx-background-color: #EBE8F9;" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <JFXButton alignment="TOP_LEFT" graphicTextGap="8.0" onAction="#showAll" prefHeight="30.0" prefWidth="252.0" styleClass="transparent-btn" text="Show All">
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/view.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" graphicTextGap="8.0" layoutX="29.0" layoutY="300.0" onAction="#insert" prefHeight="35.0" prefWidth="178.0" styleClass="transparent-btn" text="Insert">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/insert.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font></JFXButton>
+                  <JFXButton alignment="TOP_LEFT" graphicTextGap="8.0" onAction="#updateMedicine" prefHeight="25.0" prefWidth="177.0" styleClass="transparent-btn" text="Update Medicine">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" graphicTextGap="8.0" layoutX="10.0" layoutY="192.0" onAction="#deleteMedicine" prefHeight="25.0" prefWidth="177.0" styleClass="transparent-btn" text="Delete Medicine">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/trash.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" graphicTextGap="8.0" layoutX="29.0" layoutY="283.0" onAction="#bills" prefHeight="35.0" prefWidth="168.0" styleClass="transparent-btn" text="Bill">
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/invoice.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" graphicTextGap="8.0" layoutX="10.0" layoutY="320.0" onAction="#register" prefHeight="35.0" prefWidth="205.0" styleClass="transparent-btn" text="Register">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="USER" size="1.5em" />
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" graphicTextGap="8.0" layoutX="10.0" layoutY="235.0" onAction="#updateUser" prefHeight="35.0" prefWidth="168.0" styleClass="transparent-btn" text="Update User">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" graphicTextGap="8.0" layoutX="10.0" layoutY="212.0" onAction="#deleteUser" prefHeight="25.0" prefWidth="177.0" styleClass="transparent-btn" text="Delete User">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/trash.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" graphicTextGap="8.0" layoutX="29.0" layoutY="250.0" onAction="#orders" prefHeight="35.0" prefWidth="198.0" styleClass="transparent-btn" text="Orders">
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/open-message.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton alignment="TOP_LEFT" graphicTextGap="8.0" layoutX="10.0" layoutY="345.0" onAction="#manageOrder" prefHeight="35.0" prefWidth="198.0" styleClass="transparent-btn" text="Manage Order">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/gear.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <VBox.margin>
+                        <Insets bottom="8.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <AnchorPane prefHeight="446.0" prefWidth="639.0" styleClass="default-screen" stylesheets="@mainApp.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="229.0" layoutY="218.0" prefHeight="49.0" prefWidth="310.0" text="Welcome to Admin Dashboard">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <HBox prefHeight="0.0" prefWidth="714.0" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

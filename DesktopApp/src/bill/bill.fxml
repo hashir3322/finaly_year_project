@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="932.0" styleClass="default-screen" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bill.BillController">
+   <children>
+      <HBox alignment="CENTER" layoutX="6.0" layoutY="71.0" prefHeight="59.0" prefWidth="932.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="warningLabel" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="71.0" prefWidth="932.0" style="-fx-background-color: #EBE8F9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <TextField fx:id="nameField" onKeyReleased="#searchMedicine" prefHeight="27.0" prefWidth="116.0" promptText="Medicine Name" style="-fx-border-color: #0598ff; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="idField" layoutX="474.0" layoutY="10.0" prefHeight="27.0" prefWidth="116.0" promptText="Id" style="-fx-border-color: #0598ff; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="quantityField" layoutX="242.0" layoutY="10.0" prefHeight="27.0" prefWidth="116.0" promptText="Quantity" style="-fx-border-color: #0598ff; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+            <JFXButton buttonType="RAISED" onAction="#addToBill" prefHeight="35.0" prefWidth="68.0" styleClass="secondary-btn" text="Add" textFill="WHITE">
+               <stylesheets>
+                  <URL value="@../mainApp/mainApp.css" />
+                  <URL value="@../sample/application.css" />
+               </stylesheets>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="5.0" layoutY="152.0" prefHeight="59.0" prefWidth="932.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="statusLabel" layoutX="31.0" layoutY="16.0" textFill="#ffa43c" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="693.0" layoutY="14.0" onAction="#totalCalculator" styleClass="primary-btn" text="Bill Total" />
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="6.0" layoutY="261.0" prefHeight="290.0" prefWidth="516.0" styleClass="default-screen" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+         <content>
+            <TableView fx:id="medicineTable" onKeyReleased="#getSelectedId" prefHeight="290.0" prefWidth="508.0">
+              <columns>
+                <TableColumn fx:id="medIdCol" prefWidth="62.0" text="ID" />
+                <TableColumn fx:id="medNameCol" prefWidth="107.0" text="Name" />
+                  <TableColumn fx:id="medPriceCol" prefWidth="74.0" text="Price" />
+                  <TableColumn fx:id="medNetPriceCol" prefWidth="76.0" text="Net Price" />
+                  <TableColumn fx:id="medManufacturerCol" prefWidth="103.0" text="Manufacturer" />
+                  <TableColumn fx:id="medQtyCol" prefWidth="78.0" text="Quantity" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="523.0" layoutY="220.0" prefHeight="290.0" prefWidth="355.0" styleClass="default-screen" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <content>
+            <TableView fx:id="billTable" prefHeight="284.0" prefWidth="355.0">
+              <columns>
+                <TableColumn fx:id="billIdCol" prefWidth="59.0" text="ID" />
+                <TableColumn fx:id="billNameCol" prefWidth="92.0" text="Name" />
+                  <TableColumn fx:id="billPriceCol" prefWidth="62.0" text="Price" />
+                  <TableColumn fx:id="billQtyCol" minWidth="9.0" prefWidth="57.0" text="Qty" />
+                  <TableColumn fx:id="billNetCol" prefWidth="74.0" text="Net Price" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+   <stylesheets>
+      <URL value="@../mainApp/mainApp.css" />
+      <URL value="@../sample/application.css" />
+   </stylesheets>
+</AnchorPane>

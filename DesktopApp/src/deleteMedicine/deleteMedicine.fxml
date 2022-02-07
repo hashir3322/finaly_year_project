@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="932.0" styleClass="default-screen" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="deleteMedicine.DeleteMedicineController">
+   <stylesheets>
+      <URL value="@../sample/application.css" />
+      <URL value="@../mainApp/mainApp.css" />
+   </stylesheets>
+   <children>
+      <HBox alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="71.0" prefWidth="932.0" style="-fx-background-color: #EBE8F9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="nameField" onKeyReleased="#searchMedicine" prefHeight="27.0" prefWidth="116.0" promptText="Medicine Name" style="-fx-border-color: #0598ff; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="idField" layoutX="474.0" layoutY="10.0" prefHeight="27.0" prefWidth="77.0" promptText="Id" style="-fx-border-color: #0598ff; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <JFXButton buttonType="RAISED" onAction="#delete" prefHeight="35.0" prefWidth="79.0" styleClass="secondary-btn" text="Delete" textFill="WHITE">
+               <stylesheets>
+                  <URL value="@../mainApp/mainApp.css" />
+                  <URL value="@../sample/application.css" />
+               </stylesheets>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox fx:id="statusLabel" alignment="CENTER" layoutY="71.0" prefHeight="58.0" prefWidth="860.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="71.0">
+         <children>
+            <Label fx:id="warningLabel" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="8.0" layoutY="129.0" prefHeight="58.0" prefWidth="860.0" AnchorPane.bottomAnchor="313.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="-8.0" AnchorPane.topAnchor="129.0">
+         <children>
+            <Label fx:id="responseLabel" textFill="#0d5bf8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <TableView fx:id="medicineTable" layoutX="10.0" layoutY="10.0" onKeyReleased="#getSelectedId" prefHeight="290.0" prefWidth="848.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="medIdCol" prefWidth="62.0" text="ID" />
+            <TableColumn fx:id="medNameCol" prefWidth="210.0" text="Name" />
+            <TableColumn fx:id="medPriceCol" prefWidth="81.0" text="Price" />
+            <TableColumn fx:id="medNetPriceCol" prefWidth="141.0" text="Net Price" />
+            <TableColumn fx:id="medManufacturerCol" prefWidth="235.0" text="Manufacturer" />
+            <TableColumn fx:id="medQtyCol" prefWidth="118.0" text="Quantity" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

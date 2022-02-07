@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="489.0" prefWidth="932.0" styleClass="default-screen" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manageOrders.manageOrdersController">
+   <stylesheets>
+      <URL value="@../mainApp/mainApp.css" />
+      <URL value="@../sample/application.css" />
+   </stylesheets>
+   <children>
+      <HBox alignment="CENTER" layoutX="11.0" layoutY="12.0" prefHeight="85.0" prefWidth="600.0" style="-fx-background-color: #EBE8F9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="idField" promptText="Id" style="-fx-border-color: #0598ff; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+            <ComboBox fx:id="combobox" prefHeight="25.0" prefWidth="100.0" promptText="Status">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </ComboBox>
+            <JFXButton buttonType="RAISED" onAction="#updateOrder" prefHeight="35.0" prefWidth="95.0" styleClass="secondary-btn" stylesheets="@../sample/application.css" text="Update" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="-6.0" layoutY="136.0" prefHeight="45.0" prefWidth="932.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="statusLabel" textFill="#0d5bf8">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="85.0" prefHeight="51.0" prefWidth="263.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="warningLabel" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="10.0" layoutY="95.0" prefHeight="308.0" prefWidth="932.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <content>
+            <TableView fx:id="orderTable" onKeyReleased="#getSelectedId" prefHeight="322.0" prefWidth="929.0">
+               <columns>
+                  <TableColumn fx:id="idCol" prefWidth="73.0" text="Order Id" />
+                  <TableColumn fx:id="nameCol" prefWidth="172.0" text="Medicine Name" />
+                  <TableColumn fx:id="priceCol" prefWidth="105.0" text="Price" />
+                  <TableColumn fx:id="quantityCol" prefWidth="89.0" text="Quantity" />
+                  <TableColumn fx:id="netPriceCol" prefWidth="95.0" text="Net Price" />
+                  <TableColumn fx:id="pharmacyCol" prefWidth="140.0" text="Pharmacy Username" />
+                  <TableColumn fx:id="pharmacyNameCol" prefWidth="153.0" text="Pharmacy Name" />
+                  <TableColumn fx:id="statusCol" prefWidth="101.0" text="Status" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

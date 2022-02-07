@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="750.0" style="-fx-background-color: white;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<children>
+      <AnchorPane layoutX="373.0" prefHeight="530.0" prefWidth="375.0" styleClass="child-rightAnchorPane" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="usernameField" layoutX="104.0" layoutY="206.0" prefHeight="27.0" prefWidth="175.0" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="passwordField" layoutX="104.0" layoutY="289.0" prefHeight="27.0" prefWidth="175.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-width: 0px 0px 2px 0px;" />
+            <Label fx:id="usernameWarningLabel" layoutX="67.0" layoutY="248.0" textFill="RED" />
+            <FontAwesomeIcon fill="#0589ff" glyphName="USERS" layoutX="165.0" layoutY="95.0" size="3em" />
+            <Label layoutX="128.0" layoutY="129.0" text="Admin Login" textFill="#0589ff">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="142.0" layoutY="362.0" onAction="#login" prefHeight="35.0" prefWidth="93.0" style="-fx-background-color: #ffa43c;" text="Login">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIcon fill="#0598ff" glyphName="USER" layoutX="74.0" layoutY="231.0" size="1.5em" />
+            <FontAwesomeIcon fill="#0598ff" glyphName="KEY" layoutX="75.0" layoutY="315.0" size="1.5em" />
+            <Label fx:id="errorLabel" layoutX="54.0" layoutY="441.0" prefHeight="53.0" prefWidth="273.0" textFill="RED" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwordWarningLabel" layoutX="68.0" layoutY="332.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+   <AnchorPane layoutX="-3.0" layoutY="3.0" prefHeight="530.0" prefWidth="375.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER" layoutX="78.0" layoutY="108.0" prefHeight="246.0" prefWidth="175.0">
+               <children>
+                  <Label text="MIS">
+                     <font>
+                        <Font name="Arial Bold Italic" size="52.0" />
+                     </font>
+                  </Label>
+                  <Label text="Login" textFill="#0f6e9e">
+                     <font>
+                        <Font name="Arial" size="23.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="child-anchorPane" />
+            <String fx:value="child-leftAnchorPane" />
+         </styleClass>
+      </AnchorPane>
+</children>
+</AnchorPane>

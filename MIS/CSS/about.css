@@ -1,0 +1,25 @@
+.hero-section{
+	color: white;
+
+}
+.hero-section .hero-title{
+	margin-top:  200px;
+	text-align: center;
+}
+
+.about-section{
+	padding: 100px 0;
+	height: 400px;
+}
+.about-section .about-content-container{
+	width: 80%;
+	margin: 0 auto;
+}
+.about-content-container .about-heading{
+	text-align: center;
+}
+.about-content-container .about-description{
+	margin-top: 20px;
+	line-height: 24px;
+	/*text-align: center;*/
+}

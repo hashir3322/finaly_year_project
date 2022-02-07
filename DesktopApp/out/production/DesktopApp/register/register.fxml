@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="492.0" prefWidth="932.0" styleClass="default-screen" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="register.RegisterController">
+   <children>
+      <HBox alignment="CENTER" layoutX="114.0" layoutY="14.0" prefHeight="96.0" prefWidth="663.0" style="-fx-background-color: #EBE8F9;" stylesheets="@../mainApp/mainApp.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="nameField" promptText="Pharmacy Name" style="-fx-border-color: #0598ff; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></TextField>
+            <TextField fx:id="userNameField" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="124.0" promptText="User Name" style="-fx-border-color: #0598ff; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="passwordField" layoutX="159.0" layoutY="10.0" prefHeight="27.0" prefWidth="126.0" promptText="Password" style="-fx-border-color: #0598ff; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></TextField>
+            <TextField fx:id="licenseField" layoutX="392.0" layoutY="45.0" prefHeight="27.0" prefWidth="120.0" promptText="License" style="-fx-border-color: #0598ff; -fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px;">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <ComboBox fx:id="combobox" prefWidth="150.0" promptText="status">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ComboBox>
+            <JFXButton buttonType="RAISED" onAction="#registerNew" styleClass="secondary-btn" stylesheets="@../mainApp/mainApp.css" text="Register" textFill="WHITE">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </JFXButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="8.0" layoutY="96.0" prefHeight="66.0" prefWidth="757.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="warningLabel" prefHeight="24.0" prefWidth="308.0" textFill="RED">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane layoutY="236.0" prefHeight="332.0" prefWidth="757.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <content>
+            <TableView fx:id="pharmaciesTable" prefHeight="333.0" prefWidth="885.0">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nameCol" prefWidth="183.0" text="Pharmacy Name" />
+                  <TableColumn fx:id="userNameCol" prefWidth="176.0" text="User Name" />
+                  <TableColumn fx:id="passwordCol" prefWidth="180.0" text="Password" />
+                  <TableColumn fx:id="statusCol" prefWidth="106.0" text="Status" />
+                  <TableColumn fx:id="licenseCol" prefWidth="164.0" text="Licencse" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+   <stylesheets>
+      <URL value="@../mainApp/mainApp.css" />
+      <URL value="@../sample/application.css" />
+   </stylesheets>
+</AnchorPane>

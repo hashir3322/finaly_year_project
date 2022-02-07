@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="showAll.ShowAllController">
+   <children>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <TableView fx:id="medicineTable" prefHeight="449.0" prefWidth="639.0">
+              <columns>
+                <TableColumn fx:id="medIdCol" prefWidth="56.0" text="Id" />
+                <TableColumn fx:id="medNameCol" prefWidth="126.0" text="Medicine Name" />
+                  <TableColumn fx:id="medPriceCol" prefWidth="75.0" text="Price" />
+                  <TableColumn fx:id="medNetPriceCol" prefWidth="111.0" text="Net Price" />
+                  <TableColumn fx:id="medManufacturerCol" prefWidth="128.0" text="Manufacturer" />
+                  <TableColumn fx:id="medQtyCol" prefWidth="118.0" text="MedQty" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
